@@ -31,18 +31,22 @@ function App() {
 
   return (
     <StyledApp>
-      <AppContainer
-        style={{
-          textAlign: "center",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "100vh",
-        }}
-      >
-        <h1>Ahbars</h1>
-        <h2>پولاندیخ</h2>
+      <AppContainer>
+        <FlexBoxCol>
+          <FlexBoxRow>
+            <TonConnectButton />
+            <Button>
+              {network
+                ? network === CHAIN.MAINNET
+                  ? "mainnet"
+                  : "testnet"
+                : "N/A"}
+            </Button>
+          </FlexBoxRow>
+          <Counter />
+          <TransferTon />
+          <Jetton />
+        </FlexBoxCol>
       </AppContainer>
     </StyledApp>
   );
