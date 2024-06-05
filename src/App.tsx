@@ -22,7 +22,7 @@ const StyledApp = styled.div`
 `;
 
 const AppContainer = styled.div`
-  max-width: 900px;
+  // max-width: 900px;
   margin: 0 auto;
 `;
 
@@ -31,22 +31,18 @@ function App() {
 
   return (
     <StyledApp>
-      <AppContainer>
-        <FlexBoxCol>
-          <FlexBoxRow>
-            <TonConnectButton />
-            <Button>
-              {network
-                ? network === CHAIN.MAINNET
-                  ? "mainnet"
-                  : "testnet"
-                : "N/A"}
-            </Button>
-          </FlexBoxRow>
-          <Counter />
-          <TransferTon />
-          <Jetton />
-        </FlexBoxCol>
+      <AppContainer
+        style={{
+          textAlign: "center",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+        }}
+      >
+        <h1>Ahbars</h1>
+        <h2>پولاندیخ</h2>
       </AppContainer>
     </StyledApp>
   );
