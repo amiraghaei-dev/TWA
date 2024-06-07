@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  sea-chain-airdrop:
+    build: .
+    image: sea-chain-airdrop
+    restart: always
+    ports:
+      - "8081:8081"
+    networks:
+      - q-network
+networks:
+  q-network:
+    external: true
